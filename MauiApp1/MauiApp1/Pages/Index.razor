@@ -1,0 +1,33 @@
+﻿@page "/"
+
+<div class="center-container">
+    <GridRow>
+        <GridCol Style="font-size: 40px;" Span="24">@localTime</GridCol>
+    </GridRow>
+</div>
+<div style="padding: 20px;">
+    <Row Gutter="16">
+        <Col Span="8">
+        <Card  class="custom-card" Title=@("Card title")>
+            <TitleTemplate>
+        <h3>Title</h3>
+        <p>Subtitle</p>
+    </TitleTemplate>
+                <Body>
+                    <p>Card content</p>
+                </Body>
+            </Card>
+        </Col>
+        <Col Span="8">
+        <Card  class="custom-card" Title=@("Card title")>
+                <Body>
+                    <p>Card content</p>
+                </Body>
+            </Card>
+        </Col>
+    </Row>
+
+</div>
+@code{
+    private string localTime = DateTime.Now.ToString();
+}
